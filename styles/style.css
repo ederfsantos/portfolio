@@ -1,92 +1,104 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* CRIANDO VARIAVEL GLOBAL PARA DEFINIÇÃO DAS CORES DO PROJETO*/
 :root {
     --cor-primaria: #0F0E0E;
-    --cor-secundaria:#EEEEEE;
-    --cor-terciaria:#8B9A46;
-    --cor-hover:#541212;
+    --cor-secundaria: #EEEEEE;
+    --cor-terciaria: #8B9A46;
+    --cor-hover: #541212;
     --fonte-primaria: "Krona One", serif;
-    --fonte-secundaria:"Montserrat", serif;
+    --fonte-secundaria: "Montserrat", serif;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-   /* height: 100vh;*/
+body {
+    /* height: 100vh;*/
     box-sizing: border-box;
-    background-color:var(--cor-primaria);
+    background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
-.cabecalho{
+
+.cabecalho {
     padding: 2% 0% 0% 15%;
 
 }
-.cabecalho__menu{
+
+.cabecalho__menu {
     display: flex;
     gap: 80px;
-        
+
+
 }
 
-.cabecalho__menu__link{
+.cabecalho__menu__link {
 
-    font-family:  var(--fonte-secundaria);
-    font-size: 1.5rem;/*rem no lugar de px para ajuste na tela do navegador */
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    /*rem no lugar de px para ajuste na tela do navegador */
     font-weight: 600;
-    color:var(--cor-terciaria);
+    color: var(--cor-terciaria);
     text-decoration: none;
 
 }
 
-.apresentacao{
+.apresentacao {
     padding: 5% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    gap: 82px;
+
+
 }
 
-.apresentacao__conteudo{
+.apresentacao__conteudo {
     width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
-.apresentacao__conteudo__titulo{
+
+.apresentacao__conteudo__titulo {
     font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 }
-.titulo-destaque{
 
-    color:var(--cor-terciaria);
+.titulo-destaque {
+
+    color: var(--cor-terciaria);
 }
 
-.apresentacao__conteudo__texto{
+.apresentacao__conteudo__texto {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
-.apresentacao__conteudo__texto a{
+
+.apresentacao__conteudo__texto a {
     text-decoration: none;
     color: var(--cor-terciaria);
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
-.apresentacao__links{
+
+.apresentacao__links {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     gap: 32px;
 }
-.apresentacao__links__subtitulo{
-    font-family:var(--fonte-primaria);
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 1.5rem;
 }
-.apresentacao__links__navegacao{
+
+.apresentacao__links__navegacao {
     /* background-color: #22D4FD; */
     display: flex;
     justify-content: center;
@@ -99,23 +111,23 @@ body{
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
-    color:var(--cor-secundaria);
-    font-family:  var(--fonte-primaria);
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
 }
 
-.apresentacao__links__link:hover{
+.apresentacao__links__link:hover {
     cursor: pointer;
-    background-color:var(--cor-hover);
+    background-color: var(--cor-hover);
     /*border: 2px solid #0000FF;*/
-    
-}
-
-.apresentacao__imagem{
-width: 50%;
 
 }
 
-.rodape{
+.apresentacao__imagem {
+    width: 50%;
+
+}
+
+.rodape {
     padding: 24px;
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
@@ -126,5 +138,24 @@ width: 50%;
 
 
 }
+/*função do css que testa uma condição, nesse caso se a largura maxima for de 1200px
+ele executa a instrução abaixo*/
+@media (max-width:1200px) {
+.cabecalho{
+    padding: 10%;
+}
+.cabecalho__menu{
+    justify-content: center;
+}
+/*reverse para mudar a posição da imagem para o topo da tela quando a tela fo menor*/
+.apresentacao{
+    flex-direction:column-reverse;
+    padding: 5%;
+    
+}
+.apresentacao__conteudo{
+    width: auto;
+}
 
 
+}
